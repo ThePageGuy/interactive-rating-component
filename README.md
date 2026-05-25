@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github]()
-- Live Site URL: [Demo]()
+- Solution URL: [Github](https://github.com/ThePageGuy/interactive-rating-component)
+- Live Site URL: [Demo](https://thepageguy.github.io/interactive-rating-component/)
 
 ## My process
 
