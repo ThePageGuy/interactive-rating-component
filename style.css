@@ -1,0 +1,185 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* Primary */
+
+    --Orange500: hsl(25, 97%, 53%);
+
+    /* Neutral */
+
+    --White: hsl(0, 100%, 100%);
+    --Grey500: hsl(217, 12%, 63%);
+    --Grey900: hsl(213, 19%, 18%);
+    --Grey925: hsla(214, 16%, 28%, 0.75);
+    --Grey950: hsl(216, 12%, 8%);
+
+    /* Font Weight 400,700 Font Size 15 */
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--Grey950);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 8px;
+}
+
+.main{
+    background-color: var(--Grey900);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    padding: 28px 20px;
+}
+
+.main__img{
+    background-color: var(--Grey925);
+    border-radius: 50%;
+    padding: 12px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.main__img-icon{
+    aspect-ratio: 1;
+    width: 16px;
+}
+
+.main__title{
+    color: var(--White);
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.main__description{
+    color: var(--Grey500);
+    font-size: 0.975rem;
+    max-width: 310px;
+    line-height: 1.5;
+}
+
+.main__list{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main__list-btn{
+    background-color: var(--Grey925);
+    font-family: inherit;
+    color: var(--White);
+    border-radius: 50%;
+    padding: 12px;
+    border: none;
+    aspect-ratio: 1;
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.main__list-btn:hover{
+    background-color: var(--Orange500);
+    color: var(--Grey950);
+    font-weight: 700;
+}
+
+.main__list-btn:focus-visible{
+    background-color: var(--Orange500);
+    color: var(--Grey950);
+    font-weight: 700;
+    outline: 2px solid var(--White);
+}
+
+.btn-active{
+    background-color: var(--White);
+    color: var(--Grey950);
+    font-weight: 700;
+}
+
+.main__submit{
+    width: 100%;
+    background-color: var(--Orange500);
+    color: var(--Grey950);
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+    font-family: inherit;
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.main__submit:hover{
+    background-color: var(--White);
+}
+
+.main__submit:focus-visible{
+    background-color: var(--White);
+    outline: 2px solid var(--Orange500);
+}
+
+.main__submit:disabled {
+    background-color: var(--Grey500);
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.thanks-card{
+    background-color: var(--Grey900);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 32px 20px;
+}
+
+.thanks__rating{
+    background-color: var(--Grey925);
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: var(--Orange500);
+    font-size: 0.975rem;
+    font-weight: 400;
+}
+
+.thanks__title{
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.thanks__description{
+    color: var(--Grey500);
+    line-height: 1.5;
+    max-width: 320px;
+    text-align: center;
+}
+
+/* Basic usage to disable all animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
